@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
+
+# Backend storage
+backend/storage/manuals/*
+backend/storage/chroma/*
+backend/storage/app.db
+!backend/storage/manuals/.gitkeep
+!backend/storage/chroma/.gitkeep
+
+# Node / Next.js
+node_modules/
+.next/
+.env.local
+
+# OS
+.DS_Store

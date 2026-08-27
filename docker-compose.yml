@@ -1,0 +1,42 @@
+services:
+  backend:
+    build: ./backend
+    container_name: manual-assistant-backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./backend/.env
+    volumes:
+      - manuals_data:/app/storage/manuals
+      - chroma_data:/app/storage/chroma
+      - sqlite_data:/app/storage
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    container_name: manual-assistant-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+  # Optional: run Llama models locally instead of OpenAI.
+  # Set LLM_PROVIDER=ollama in backend/.env to use this.
+  ollama:
+    image: ollama/ollama:latest
+    container_name: manual-assistant-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    profiles: ["ollama"]
+    restart: unless-stopped
+
+volumes:
+  manuals_data:
+  chroma_data:
+  sqlite_data:
+  ollama_data:
