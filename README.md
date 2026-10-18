@@ -269,3 +269,5 @@ would add):
 - **Analytics** on unanswered/low-confidence questions to find manual content gaps
 - **VIN-based manual auto-selection** instead of manual upload
 - **Guardrails/eval suite** to continuously test citation accuracy against ground truth
+#   S m a r t _ A u t o m o b i l e _ U s e r _ M a n u a l _ A s s i s t a n t  
+ 
