@@ -46,6 +46,25 @@ source documents, so it never invents specs or procedures.
   fed back to the LLM, so follow-up questions ("what about the rear tires?")
   work.
 
+## Adaptive retrieval (ADAPT-Diag)
+
+Beyond a fixed top-k pipeline, `backend/app/adaptive/` implements the adaptive RAG design from
+the accompanying paper:
+
+* **Context encoder** - extracts OBD-II trouble codes, builds metadata filters from the vehicle
+  profile, and turns out-of-range sensor readings into symptom tokens.
+* **Router** - picks exact DTC lookup (M0), filtered BM25 (M1), hybrid BM25+dense with
+  reciprocal-rank fusion (M2), or iterative retrieval (M3).
+* **Sufficiency score + abstention** - scores whether the retrieved evidence supports an answer,
+  escalates M1 -> M2 -> M3 within a retry budget, and otherwise declines instead of guessing.
+* The chat API returns `retrieval_mode`, `sufficiency` and `abstained`; the UI shows them.
+
+See [`eval/README.md`](eval/README.md) for the benchmark, results and **honest limitations**:
+on a small owner's-manual benchmark the adaptive pipeline is competitive with, but not
+significantly better than, stemmed BM25 and a static hybrid.
+
+Run the unit tests with `cd backend && python -m pytest tests`.
+
 ## Features
 
 - 📄 PDF upload & automatic ingestion (chunking + embeddings)
@@ -269,5 +288,6 @@ would add):
 - **Analytics** on unanswered/low-confidence questions to find manual content gaps
 - **VIN-based manual auto-selection** instead of manual upload
 - **Guardrails/eval suite** to continuously test citation accuracy against ground truth
-#   S m a r t _ A u t o m o b i l e _ U s e r _ M a n u a l _ A s s i s t a n t  
+#   S m a r t _ A u t o m o b i l e _ U s e r _ M a n u a l _ A s s i s t a n t 
+ 
  

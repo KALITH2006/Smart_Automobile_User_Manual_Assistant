@@ -20,6 +20,26 @@ export type ChatMessage = {
   content: string;
   sources: Source[];
   created_at: string;
+  // Adaptive retrieval diagnostics; only present on freshly generated assistant replies
+  retrieval_mode?: string | null;
+  sufficiency?: number | null;
+  abstained?: boolean;
+};
+
+export type ChatResponse = {
+  conversation_id: string;
+  answer: string;
+  sources: Source[];
+  retrieval_mode?: string | null;
+  sufficiency?: number | null;
+  abstained?: boolean;
+};
+
+export const MODE_LABELS: Record<string, string> = {
+  M0: "Exact code lookup",
+  M1: "Keyword search",
+  M2: "Hybrid search",
+  M3: "Iterative search",
 };
 
 export type Conversation = {
@@ -73,7 +93,7 @@ export const api = {
     manualId: string,
     question: string,
     conversationId?: string
-  ): Promise<{ conversation_id: string; answer: string; sources: Source[] }> =>
+  ): Promise<ChatResponse> =>
     fetch(`${API_URL}/api/chat`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },

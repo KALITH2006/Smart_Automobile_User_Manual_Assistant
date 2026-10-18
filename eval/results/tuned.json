@@ -1,0 +1,10 @@
+{
+  "alpha": 0.5,
+  "beta": 0.5,
+  "gamma": 0.0,
+  "tau": 0.986,
+  "tau_m1": 0.562,
+  "theta_r": 0.5,
+  "t_max": 3,
+  "n_evidence": 5
+}

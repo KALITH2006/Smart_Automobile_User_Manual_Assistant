@@ -62,6 +62,9 @@ export default function ChatWindow({
         content: res.answer,
         sources: res.sources,
         created_at: new Date().toISOString(),
+        retrieval_mode: res.retrieval_mode,
+        sufficiency: res.sufficiency,
+        abstained: res.abstained,
       };
       setMessages((prev) => [...prev, assistantMsg]);
     } catch (e: any) {

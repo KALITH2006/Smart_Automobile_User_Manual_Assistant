@@ -61,6 +61,7 @@ def delete_manual(manual_id: str, db: Session = Depends(get_db)):
     manual = db.get(Manual, manual_id)
     if not manual:
         raise HTTPException(404, "Manual not found.")
+    get_pipeline().forget_collection(manual.collection_name)
     db.delete(manual)
     db.commit()
     return {"deleted": manual_id}

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import ReactMarkdown from "react-markdown";
-import { ChatMessage } from "../lib/api";
+import { ChatMessage, MODE_LABELS } from "../lib/api";
 
 export default function MessageBubble({ message }: { message: ChatMessage }) {
   const [showSources, setShowSources] = useState(false);
@@ -21,13 +21,34 @@ export default function MessageBubble({ message }: { message: ChatMessage }) {
           <ReactMarkdown>{message.content}</ReactMarkdown>
         </div>
 
+        {!isUser && message.retrieval_mode && (
+          <div className="mt-2 flex flex-wrap items-center gap-2 text-[11px]">
+            <span className="rounded-full bg-slate-700 px-2 py-0.5 text-slate-300">
+              {MODE_LABELS[message.retrieval_mode] ?? message.retrieval_mode}
+            </span>
+            {message.sufficiency != null && (
+              <span
+                className="rounded-full bg-slate-700 px-2 py-0.5 text-slate-300"
+                title="How well the retrieved manual sections support an answer"
+              >
+                evidence {Math.round(message.sufficiency * 100)}%
+              </span>
+            )}
+            {message.abstained && (
+              <span className="rounded-full bg-amber-900/60 px-2 py-0.5 text-amber-200">
+                Insufficient evidence
+              </span>
+            )}
+          </div>
+        )}
+
         {!isUser && message.sources.length > 0 && (
           <div className="mt-2 pt-2 border-t border-slate-700">
             <button
               onClick={() => setShowSources((s) => !s)}
               className="text-xs text-brand-400 hover:text-brand-300 font-medium"
             >
-              {showSources ? "Hide" : "Show"} sources ({message.sources.length} page
+              {showSources ? "Hide" : message.abstained ? "Show closest" : "Show"} sources ({message.sources.length} page
               {message.sources.length > 1 ? "s" : ""})
             </button>
             {showSources && (

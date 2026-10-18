@@ -18,3 +18,9 @@ node_modules/
 
 # OS
 .DS_Store
+
+# Evaluation: manuals are copyrighted, regenerate page dumps locally
+eval/data/
+
+# Copyrighted manuals used for local evaluation
+/*.pdf

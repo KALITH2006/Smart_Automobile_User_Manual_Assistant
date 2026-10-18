@@ -54,3 +54,7 @@ class ChatResponse(BaseModel):
     conversation_id: str
     answer: str
     sources: list[Source]
+    # Adaptive retrieval diagnostics (None when ADAPTIVE_RAG is off)
+    retrieval_mode: str | None = None  # M0 exact DTC lookup | M1 sparse | M2 hybrid | M3 iterative
+    sufficiency: float | None = None
+    abstained: bool = False

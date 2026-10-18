@@ -5,6 +5,7 @@ from sqlalchemy.orm import Session
 
 from app.database import get_db, Manual, Conversation, Message
 from app.schemas import ChatRequest, ChatResponse, ConversationOut, ConversationDetailOut, Source
+from app.config import get_settings
 from app.rag_pipeline import get_pipeline
 
 router = APIRouter(prefix="/api", tags=["chat"])
@@ -44,8 +45,12 @@ def chat(req: ChatRequest, db: Session = Depends(get_db)):
             pending_q = None
 
     pipeline = get_pipeline()
+    meta = None
     try:
-        answer_text, sources = pipeline.answer(manual.collection_name, req.question, history)
+        if get_settings().ADAPTIVE_RAG:
+            answer_text, sources, meta = pipeline.answer_adaptive(manual.collection_name, req.question, history)
+        else:
+            answer_text, sources = pipeline.answer(manual.collection_name, req.question, history)
     except Exception as e:
         raise HTTPException(500, f"Failed to generate answer: {e}")
 
@@ -63,6 +68,9 @@ def chat(req: ChatRequest, db: Session = Depends(get_db)):
         conversation_id=conversation.id,
         answer=answer_text,
         sources=[Source(**s) for s in sources],
+        retrieval_mode=meta.mode if meta else None,
+        sufficiency=meta.sufficiency if meta else None,
+        abstained=meta.abstained if meta else False,
     )
 
 

@@ -1,0 +1,71 @@
+{"manual": "suzuki_ciaz", "group": "procedure", "question": "How do I jump start the car using another vehicle's battery?", "gold_pages": [274], "evidence": "Use only a 12-volt battery to jump start", "split": "dev"}
+{"manual": "suzuki_ciaz", "group": "procedure", "question": "How often should the tires be rotated?", "gold_pages": [251], "evidence": "Tires should be rotated every", "split": "test"}
+{"manual": "suzuki_ciaz", "group": "procedure", "question": "How do I position the jack to lift the car for a wheel change?", "gold_pages": [268], "evidence": "jack-head groove fits around", "split": "test"}
+{"manual": "suzuki_ciaz", "group": "lookup", "question": "What amperage is the cruise control fuse?", "gold_pages": [255], "evidence": "7\\.5 A Cruise control", "split": "test"}
+{"manual": "suzuki_ciaz", "group": "procedure", "question": "How do I change the battery in the remote key?", "gold_pages": [31], "evidence": "o replace the battery of the remote", "split": "dev"}
+{"manual": "suzuki_ciaz", "group": "procedure", "question": "When should the wiper blades be replaced and how?", "gold_pages": [261], "evidence": "If the wiper blades become brittle", "split": "dev"}
+{"manual": "suzuki_ciaz", "group": "symptom", "question": "The brake warning light came on while driving, what should I do?", "gold_pages": [75], "evidence": "If the brake system warning light comes on while you", "split": "test"}
+{"manual": "suzuki_ciaz", "group": "symptom", "question": "A light came on with a ding sound reminding me about fuel", "gold_pages": [79], "evidence": "a ding sounds once to remind you to fill the fuel", "split": "test"}
+{"manual": "suzuki_ciaz", "group": "lookup", "question": "Which fluids and items should I check under the hood every week?", "gold_pages": [90], "evidence": "perform the following under-hood checks", "split": "test"}
+{"manual": "suzuki_ciaz", "group": "procedure", "question": "How do I check the battery electrolyte level?", "gold_pages": [251], "evidence": "level of the battery solution must be kept", "split": "test"}
+{"manual": "suzuki_ciaz", "group": "lookup", "question": "How should an infant be seated in the car?", "gold_pages": [51], "evidence": "Infant restraint - rear seat only", "split": "dev"}
+{"manual": "suzuki_ciaz", "group": "symptom", "question": "My power window auto-up stopped working after the battery was disconnected", "gold_pages": [39, 40], "evidence": "pinching prevention function needs to be initialized", "split": "dev"}
+{"manual": "suzuki_ciaz", "group": "procedure", "question": "How do I use the windshield washer and wipers?", "gold_pages": [85], "evidence": "Wiper and Washer Operation", "split": "dev"}
+{"manual": "suzuki_ciaz", "group": "symptom", "question": "The radio has no power and makes no sound", "gold_pages": [187, 217], "evidence": "Fuse is blown\\. Contact your authorized SUZUKI dealer", "split": "test"}
+{"manual": "suzuki_ciaz", "group": "lookup", "question": "Should the spare tire pressure also be checked?", "gold_pages": [90], "evidence": "Also check the tire pressure of the spare tire", "split": "dev"}
+{"manual": "suzuki_ciaz", "group": "procedure", "question": "What can I do to get better mileage?", "gold_pages": [114], "evidence": "will help you improve fuel economy", "split": "test"}
+{"manual": "suzuki_ciaz", "group": "procedure", "question": "Can I tow the car with a cable if there is no tow truck?", "gold_pages": [117], "evidence": "towed by a towing cable", "split": "dev"}
+{"manual": "suzuki_ciaz", "group": "symptom", "question": "What does the engine temperature gauge show and what is the normal range?", "gold_pages": [65], "evidence": "this gauge indicates the engine coolant tem", "split": "test"}
+{"manual": "suzuki_ciaz", "group": "symptom", "question": "What does the ABS warning light mean when it stays on?", "gold_pages": [76], "evidence": "Anti-Lock Brake System \\(ABS\\) Warning Light \\(if equipped\\)\\s+65D529", "split": "test"}
+{"manual": "bmw", "group": "procedure", "question": "How do I jump-start the car?", "gold_pages": [254], "evidence": "Starting aid terminals The starting aid terminal in the engine compartment acts", "split": "test"}
+{"manual": "bmw", "group": "lookup", "question": "Where can I find the correct tire inflation pressure values?", "gold_pages": [27], "evidence": "values can be found on the sign on the door pillar", "split": "dev"}
+{"manual": "bmw", "group": "symptom", "question": "I think I have a flat tire, what should I do?", "gold_pages": [141], "evidence": "Actions in the event of a flat tire", "split": "dev"}
+{"manual": "bmw", "group": "procedure", "question": "How do I open the fuel cap to refuel?", "gold_pages": [26, 214], "evidence": "Turn the fuel cap counterclockwise", "split": "test"}
+{"manual": "bmw", "group": "procedure", "question": "How do I display the engine oil level?", "gold_pages": [27, 240], "evidence": "Displaying the engine oil level", "split": "test"}
+{"manual": "bmw", "group": "lookup", "question": "What should I mix into the washer fluid reservoir?", "gold_pages": [104], "evidence": "Use a mixture of tap water and windshield washer concentrate", "split": "dev"}
+{"manual": "bmw", "group": "lookup", "question": "Can I use water-repellent additives in the windshield washer?", "gold_pages": [105], "evidence": "Silicon-containing additives in the washer fluid", "split": "dev"}
+{"manual": "bmw", "group": "procedure", "question": "How do I secure a child seat in the car?", "gold_pages": [91, 196], "evidence": "child restraint system fits securely against the backrest", "split": "dev"}
+{"manual": "bmw", "group": "lookup", "question": "How does the tire pressure monitor work?", "gold_pages": [138], "evidence": "The system monitors tire inflation pressure in the four mounted tires", "split": "test"}
+{"manual": "bmw", "group": "symptom", "question": "A yellow tire symbol appeared on the display, what do I do?", "gold_pages": [140], "evidence": "If a tire inflation pressure check is required", "split": "dev"}
+{"manual": "bmw", "group": "symptom", "question": "The wipers are frozen to the windshield", "gold_pages": [101, 104], "evidence": "If the wipers are frozen to the windshield", "split": "test"}
+{"manual": "bmw", "group": "procedure", "question": "How do I switch off the engine on a manual transmission car?", "gold_pages": [22], "evidence": "Manual transmission: switching off", "split": "dev"}
+{"manual": "bmw", "group": "lookup", "question": "How big is the fuel tank?", "gold_pages": [265], "evidence": "Fuel tank, approx\\. US gal/liters", "split": "test"}
+{"manual": "bmw", "group": "procedure", "question": "How do I fold the wipers away so I can change the blades?", "gold_pages": [103], "evidence": "Important, for instance when changing the wiper blades", "split": "test"}
+{"manual": "bmw", "group": "lookup", "question": "Where is the tow fitting kept?", "gold_pages": [257], "evidence": "The tow fitting and the onboard vehicle tool kit", "split": "test"}
+{"manual": "bmw", "group": "procedure", "question": "How do I connect a battery charger safely?", "gold_pages": [191, 249], "evidence": "Only connect battery chargers for the vehicle battery", "split": "dev"}
+{"manual": "bmw", "group": "symptom", "question": "The coolant looks low, do I need to check more than one place?", "gold_pages": [243], "evidence": "always check the coolant level of both", "split": "dev"}
+{"manual": "bmw", "group": "symptom", "question": "A yellow light came on when the fuel is low", "gold_pages": [116], "evidence": "yellow indicator light illuminates, once the fuel reserve is reached", "split": "test"}
+{"manual": "bmw", "group": "procedure", "question": "How do I replace the battery of the vehicle key?", "gold_pages": [62], "evidence": "Each vehicle key contains a replaceable battery", "split": "dev"}
+{"manual": "suzuki_ciaz", "group": "unanswerable", "question": "What is the torque specification for the cylinder head bolts?", "gold_pages": [], "evidence": null, "split": "test"}
+{"manual": "suzuki_ciaz", "group": "unanswerable", "question": "How do I replace the timing chain?", "gold_pages": [], "evidence": null, "split": "dev"}
+{"manual": "suzuki_ciaz", "group": "unanswerable", "question": "How do I rebuild the CVT transmission?", "gold_pages": [], "evidence": null, "split": "test"}
+{"manual": "suzuki_ciaz", "group": "unanswerable", "question": "How do I flash new software onto the engine control unit?", "gold_pages": [], "evidence": null, "split": "dev"}
+{"manual": "bmw", "group": "unanswerable", "question": "What is the torque specification for the cylinder head bolts?", "gold_pages": [], "evidence": null, "split": "dev"}
+{"manual": "bmw", "group": "unanswerable", "question": "How do I replace the clutch disc?", "gold_pages": [], "evidence": null, "split": "test"}
+{"manual": "bmw", "group": "unanswerable", "question": "What is the valve clearance adjustment procedure?", "gold_pages": [], "evidence": null, "split": "test"}
+{"manual": "bmw", "group": "unanswerable", "question": "How do I rebuild the turbocharger?", "gold_pages": [], "evidence": null, "split": "dev"}
+{"manual": "bmw", "group": "unanswerable", "question": "How do I recode the engine control unit with a laptop?", "gold_pages": [], "evidence": null, "split": "test"}
+{"manual": "suzuki_ciaz", "group": "unanswerable", "question": "How do I perform a cylinder compression test?", "gold_pages": [], "evidence": null, "split": "test"}
+{"manual": "suzuki_ciaz", "group": "unanswerable", "question": "How do I replace the cylinder head gasket?", "gold_pages": [], "evidence": null, "split": "dev"}
+{"manual": "suzuki_ciaz", "group": "unanswerable", "question": "How do I remove the engine from the vehicle?", "gold_pages": [], "evidence": null, "split": "dev"}
+{"manual": "suzuki_ciaz", "group": "unanswerable", "question": "What are the wiring diagram colors for the ignition coil harness?", "gold_pages": [], "evidence": null, "split": "dev"}
+{"manual": "suzuki_ciaz", "group": "unanswerable", "question": "How do I reset the adaptation values using a diagnostic scan tool?", "gold_pages": [], "evidence": null, "split": "test"}
+{"manual": "suzuki_ciaz", "group": "unanswerable", "question": "What is the stall speed of the torque converter?", "gold_pages": [], "evidence": null, "split": "test"}
+{"manual": "suzuki_ciaz", "group": "unanswerable", "question": "How do I replace the engine oil pump?", "gold_pages": [], "evidence": null, "split": "test"}
+{"manual": "suzuki_ciaz", "group": "unanswerable", "question": "What is the part number for the front brake pads?", "gold_pages": [], "evidence": null, "split": "test"}
+{"manual": "suzuki_ciaz", "group": "unanswerable", "question": "How do I adjust the camshaft timing?", "gold_pages": [], "evidence": null, "split": "test"}
+{"manual": "suzuki_ciaz", "group": "unanswerable", "question": "How do I install a lift kit?", "gold_pages": [], "evidence": null, "split": "dev"}
+{"manual": "suzuki_ciaz", "group": "unanswerable", "question": "What is the capital of France?", "gold_pages": [], "evidence": null, "split": "test"}
+{"manual": "suzuki_ciaz", "group": "unanswerable", "question": "Give me a recipe for chocolate cake", "gold_pages": [], "evidence": null, "split": "dev"}
+{"manual": "bmw", "group": "unanswerable", "question": "How do I perform a cylinder compression test?", "gold_pages": [], "evidence": null, "split": "dev"}
+{"manual": "bmw", "group": "unanswerable", "question": "How do I replace the cylinder head gasket?", "gold_pages": [], "evidence": null, "split": "test"}
+{"manual": "bmw", "group": "unanswerable", "question": "How do I remove the engine from the vehicle?", "gold_pages": [], "evidence": null, "split": "test"}
+{"manual": "bmw", "group": "unanswerable", "question": "What are the wiring diagram colors for the ignition coil harness?", "gold_pages": [], "evidence": null, "split": "test"}
+{"manual": "bmw", "group": "unanswerable", "question": "How do I reset the adaptation values using a diagnostic scan tool?", "gold_pages": [], "evidence": null, "split": "dev"}
+{"manual": "bmw", "group": "unanswerable", "question": "What is the stall speed of the torque converter?", "gold_pages": [], "evidence": null, "split": "test"}
+{"manual": "bmw", "group": "unanswerable", "question": "How do I replace the engine oil pump?", "gold_pages": [], "evidence": null, "split": "test"}
+{"manual": "bmw", "group": "unanswerable", "question": "What is the part number for the front brake pads?", "gold_pages": [], "evidence": null, "split": "test"}
+{"manual": "bmw", "group": "unanswerable", "question": "How do I adjust the camshaft timing?", "gold_pages": [], "evidence": null, "split": "dev"}
+{"manual": "bmw", "group": "unanswerable", "question": "How do I install a lift kit?", "gold_pages": [], "evidence": null, "split": "dev"}
+{"manual": "bmw", "group": "unanswerable", "question": "What is the capital of France?", "gold_pages": [], "evidence": null, "split": "dev"}
+{"manual": "bmw", "group": "unanswerable", "question": "Give me a recipe for chocolate cake", "gold_pages": [], "evidence": null, "split": "test"}
